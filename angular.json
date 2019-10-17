@@ -25,7 +25,10 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "Orders.json", "input": "./", "output": "./assets/" },
+              { "glob": "Products.json", "input": "./", "output": "./assets/" },
+              { "glob": "Users.json", "input": "./", "output": "./assets/" }
             ],
             "styles": [
               "src/styles.scss"

@@ -1,0 +1,14 @@
+<div class="orders">
+  <div *ngFor="let order of orders; index as OrderId" class="order">
+    <div class="card-container">
+      <div class="card card-small" tabindex="0">
+        <div class="card-info">
+          <p class="date">when: <time>{{order.OrderDate | date:"dd MMM yyyy '-' h:mma"}}</time></p>
+          <p class="price">Total: {{order.TotalPrice}}</p>
+          <p class="payment">Payment Method: {{order.PaymentType}}</p>
+          <a title="order details" [routerLink]="['/orders', order.OrderId]">Details</a>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>

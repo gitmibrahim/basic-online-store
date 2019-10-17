@@ -1,0 +1,21 @@
+<div class="card-container">
+  <div class="card card-small" tabindex="0">
+    <div class="card-info" *ngIf="order">
+      <p class="price">- When: {{order.OrderDate | date:"dd MMM yyyy '-' h:mma"}}</p>
+      <div class="quantity" *ngIf="user">
+        <span>- User: </span>
+        <app-user [user]="user"></app-user>
+      </div>
+      <p class="order-total-price">- Total Price: {{order.TotalPrice}}</p>
+      <div class="products" *ngIf="products">
+        <span>- Products: </span>
+        <div class="product" *ngFor="let product of products; let index = index">
+          <p class="product-name">Name: {{product.ProductName}}</p>
+          <p class="product-price">Unit Price: {{product.ProductPrice}}</p>
+          <p class="product-quantity">Quantity: {{order.Products[index].Quantity}}</p>
+          <p class="total-price">Item Total PRice: {{product.ProductPrice * order.Products[index].Quantity}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

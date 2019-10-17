@@ -1,1 +1,143 @@
 /* You can add global styles to this file, and also import other style files */
+
+svg.material-icons {
+  height: 24px;
+  width: auto;
+}
+
+svg.material-icons:not(:last-child) {
+  margin-right: 8px;
+}
+
+.card svg.material-icons path {
+  fill: #888;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.card {
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-container .card:not(:last-child) {
+  margin-right: 0;
+}
+
+.card.card-small {
+  width: 350px;
+}
+
+.card-image {
+  margin-right: 15px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.card-info .name {
+  margin-top: 0;
+}
+.card-info .price,
+.card-info .quantity {
+  margin: 0;
+}
+
+.card.highlight-card {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: auto;
+  min-width: 30%;
+  position: relative;
+}
+
+.card.card.highlight-card span {
+  margin-left: 60px;
+}
+.card-container .card:not(.highlight-card):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 3px rgba(black, 0.35);
+}
+
+a,
+a:visited,
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+.github-star-badge {
+  color: #24292e;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 3px 10px;
+  border: 1px solid rgba(27,31,35,.2);
+  border-radius: 3px;
+  background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+  margin-left: 4px;
+  font-weight: 600;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+.github-star-badge:hover {
+  background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+  border-color: rgba(27,31,35,.35);
+  background-position: -.5em;
+}
+
+.github-star-badge .material-icons {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+@media (max-width: 500px) {
+  .card.card-small {
+    padding: 0 5px;
+  }
+  .card-info {
+    height: 180px;
+  }
+}

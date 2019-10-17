@@ -1,0 +1,17 @@
+<div class="card-container">
+  <div class="card card-small" tabindex="0">
+    <span class="low-stock" [ngClass]="product.AvailablePieces <= 10 && product.AvailablePieces > 0 ? 'limited-stock': 'not-limited'">limited</span>
+    <span class="low-stock" [ngClass]="product.AvailablePieces <= 0 ? 'out-of-stock': 'not-limited'">out of stock</span>
+    <div class="card-image">
+      <svg width="200" height="200"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">       
+        <image [attr.xlink:href]="product.ProductImg" height="200" width="200"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <h2 class="name">{{product.ProductName}}</h2>
+      <p class="price">Price: {{product.ProductPrice}}</p>
+      <p class="quantity">Quantity: {{product.AvailablePieces}}</p>
+    </div>
+  </div>
+</div>

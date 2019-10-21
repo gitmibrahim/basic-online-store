@@ -10,7 +10,7 @@ export class ProductsService {
   products = new BehaviorSubject<Product[]>([]);
   
   constructor(private http: HttpClient) {
-    this.http.get('./assets/data/Products.json').subscribe((data: Product[]) => {
+    this.http.get('./assets/data/Products.json?v=3').subscribe((data: Product[]) => {
       this.products.next(data);
     })
   }

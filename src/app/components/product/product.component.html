@@ -1,7 +1,7 @@
 <div class="card-container">
   <div class="card card-small" tabindex="0">
-    <span class="low-stock" [ngClass]="product.AvailablePieces <= 10 && product.AvailablePieces > 0 ? 'limited-stock': 'not-limited'">limited</span>
-    <span class="low-stock" [ngClass]="product.AvailablePieces <= 0 ? 'out-of-stock': 'not-limited'">out of stock</span>
+    <span *ngIf="product.AvailablePieces <= 10 && product.AvailablePieces > 0" class="low-stock limited-stock">limited</span>
+    <span *ngIf="product.AvailablePieces <= 0" class="low-stock out-of-stock">out of stock</span>
     <div class="card-image">
       <svg width="200" height="200"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">       
@@ -14,4 +14,5 @@
       <p class="quantity">Quantity: {{product.AvailablePieces}}</p>
     </div>
   </div>
+  <button class="btn">add to cart</button>
 </div>

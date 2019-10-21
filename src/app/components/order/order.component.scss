@@ -1,13 +1,13 @@
-.product {
-  background: #c3c2c2;
+.product,
+.user {
   padding: 10px 20px;
   border-radius: 5px;
-  margin: 10px 50px;
-  background: #c2c3c3;
+  margin: 10px 0;
+  background: #dadada;
 }
 
-.card-small {
-  width: 500px;
+.card-container {
+  padding: 20px 20px;
 }
 
 .quantity {

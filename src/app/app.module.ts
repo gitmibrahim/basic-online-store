@@ -9,6 +9,8 @@ import { AppProductsComponent } from './components/app-products/app-products.com
 import { AppOrdersComponent } from './components/app-orders/app-orders.component';
 import { OrderComponent } from './components/order/order.component';
 import { UserComponent } from './components/user/user.component';
+import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { UserComponent } from './components/user/user.component';
     AppProductsComponent,
     AppOrdersComponent,
     OrderComponent,
-    UserComponent
+    UserComponent,
+    BurgerMenuComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,

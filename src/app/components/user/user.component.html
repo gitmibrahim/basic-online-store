@@ -1,8 +1,8 @@
   <div class="card card-small" tabindex="0">
     <div class="card-info">
-      <h4 class="name">Name: {{user.Name}}</h4>
+      <h4 class="user-name">Name: {{user.Name}}</h4>
       <address>
-        <a [href]="user.Email">Email: {{user.Email}}</a><br>
+        <a [href]="'mailto:' + user.Email">Email: {{user.Email}}</a><br>
         <a [href]="'tel:' + user.Phone">Phone: {{user.Phone}}</a><br />
         <span>Address: {{user.Address}}</span>
       </address>

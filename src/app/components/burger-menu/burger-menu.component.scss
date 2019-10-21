@@ -1,0 +1,42 @@
+$burgerWidth: 24px;
+$burgerBarHeight: 1px;
+$burgerBarColor: #fff;
+
+.burger-menu {
+  width: $burgerWidth;
+  height: $burgerWidth;
+  cursor: pointer;
+
+  .burger-container {
+    position: relative;
+
+    .burger-inner {
+      position: absolute;
+      width: $burgerWidth - 2 * $burgerBarHeight;
+      left: 0px;
+      top: 11px;
+      border: $burgerBarHeight solid $burgerBarColor;
+      transition: border-color .1s ease-in .1s;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: -6px;
+        left: -$burgerBarHeight;
+        width: $burgerWidth - 2 * $burgerBarHeight;
+        border: $burgerBarHeight solid $burgerBarColor;
+        transition: top .1s ease-in .2s, transform ease-in .1s;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 4px;
+        left: -$burgerBarHeight;
+        width: $burgerWidth - 2 * $burgerBarHeight;
+        border: $burgerBarHeight solid $burgerBarColor;
+        transition: top .1s ease-in .2s, transform ease-in .1s;
+      }
+    }
+  }
+}

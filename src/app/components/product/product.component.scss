@@ -1,9 +1,7 @@
-.not-limited {
-  display: none;
-}
 .low-stock {
   position: absolute;
   height: 16px;
+  display: block;
   transform: rotate(-45deg);
   color: #fff;
   text-align: center;
@@ -12,23 +10,23 @@
   padding: 5px;
 }
 .limited-stock {
-  width: 86px;
-  margin-top: -76px;
+  width: 92px;
+  margin-top: 13px;
   margin-left: -44px;
   background: #be3f3f;
 }
 .out-of-stock {
-  width: 105px;
-  margin-top: -69px;
+  width: 111px;
+  margin-top: 20px;
   margin-left: -47px;
   background: #e01818;
 }
 
 @media (max-width: 500px) {
   .limited-stock {
-    margin-left: -29px;
+    margin-left: -45px;
   }
   .out-of-stock {
-    margin-left: -32px;
+    margin-left: -48px;
   }
 }

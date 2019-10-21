@@ -29,8 +29,8 @@ export class OrderComponent implements OnInit {
       this.ordersService.orders.subscribe((data: Order[]) => {
         if (data.length > 0) {
           this.order = data.find(order => order.OrderId === id);
-          this.usersService.users.subscribe((users: User[]) => {
-            this.user = users.find((user: User) => user.Id === this.order.UserId)
+          this.usersService.users.subscribe(() => {
+            this.user = this.usersService.getUser(this.order.UserId)
           });
           this.products = this.order.Products.map(
             (orderProduct: OrderProduct) => this.productService.getProduct(orderProduct.ProductId)
